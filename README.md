@@ -65,8 +65,8 @@ Next check `messaging-statefulset` and again examine `messaging-statefulset` sec
               name: ephemeral
 ```
 
-Both manifests for [pyadcs-connector-deployment](https://github.com/CZERTAINLY/CZERTAINLY-Helm-Charts/blob/2.14.0/charts/pyadcs-connector/templates/pyadcs-connector-deployment.yaml#L170) and [messaging-statefulset](https://github.com/CZERTAINLY/CZERTAINLY-Helm-Charts/blob/2.14.0/charts/messaging-rabbitmq/templates/messaging-statefulset.yaml#L249) 
-are using same call to library:
+Both manifests for [pyadcs-connector-deployment](https://github.com/CZERTAINLY/CZERTAINLY-Helm-Charts/blob/2.14.0/charts/pyadcs-connector/templates/pyadcs-connector-deployment.yaml#L170) and [messaging-statefulset](https://github.com/CZERTAINLY/CZERTAINLY-Helm-Charts/blob/2.14.0/charts/messaging-rabbitmq/templates/messaging-statefulset.yaml#L249)
+are using same call to [library](https://github.com/CZERTAINLY/CZERTAINLY-Helm-Charts/blob/2.14.0/charts/czertainly-lib/templates/_customizations.yaml#L8):
 ```yaml
 {{- define "pyadcs-connector.customization.volumeMounts" -}}
 {{- include "czertainly-lib.customizations.render.yaml" ( dict "parts" (list .Values.global.additionalVolumeMounts .Values.additionalVolumeMounts) "context" $ ) }}
@@ -120,4 +120,3 @@ metadata:
             - mountPath: /nic
               name: libsemik
 ```
-
