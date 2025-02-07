@@ -83,7 +83,7 @@ How is possible that it is working only for that deployment and not for stateful
 How is possible that this is prefectly working when using `helm` on cmdline?
 ```
 cat values.yaml | yq --yaml-output '.czertainly' > /tmp/values.yaml
-helm -n czertainly-demo upgrade --install test oci://harbor.3key.company/czertainly-helm/czertainly --values=/tmp/values.yaml --version=2.14.0 --dry-run
+helm -n czertainly-demo template czertainly-tlm oci://harbor.3key.company/czertainly-helm/czertainly --values=/tmp/values.yaml --version=2.14.0
 ...
 # Source: czertainly/charts/pyAdcsConnector/templates/pyadcs-connector-deployment.yaml
 apiVersion: apps/v1
