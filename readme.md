@@ -1,7 +1,9 @@
 # when defined and equal false, nothing is shown
 
 ```
-semik@semik:~/3K/CZERTAINLY-argocd-demo/czertainly [develop|●5✚ 1…5]✘-1$ helm dependency update --skip-refresh; helm dependency build --skip-refresh;  helm install --set nic.nikde=false --debug --dry-run xx . |  grep -B 6 -A 1 'semik uz'
+semik@semik:~/3K/CZERTAINLY-argocd-demo/czertainly [develop|●5✚ 1…5]✘-1$ helm dependency update --skip-refresh; \
+  helm dependency build --skip-refresh; \
+  helm install --set nic.nikde=false --debug --dry-run xx . |  grep -B 6 -A 1 'semik uz'
 Saving 2 charts
 Downloading czertainly from repo oci://harbor.3key.company/czertainly-helm
 Pulled: harbor.3key.company/czertainly-helm/czertainly:2.14.0
@@ -19,7 +21,9 @@ install.go:242: 2025-02-11 12:15:21.673454372 +0100 CET m=+0.036330676 [debug] C
 # when defined and equal true, expected manifest is added
 
 ```
-semik@semik:~/3K/CZERTAINLY-argocd-demo/czertainly [develop|●5✚ 1…6]✘-1$ helm dependency update --skip-refresh; helm dependency build --skip-refresh;  helm install --set nic.nikde=true --debug --dry-run xx . |  grep -B 6 -A 1 'semik uz'
+semik@semik:~/3K/CZERTAINLY-argocd-demo/czertainly [develop|●5✚ 1…6]✘-1$ helm dependency update --skip-refresh; \
+  helm dependency build --skip-refresh; \
+  helm install --set nic.nikde=true --debug --dry-run xx . |  grep -B 6 -A 1 'semik uz'
 Saving 2 charts
 Downloading czertainly from repo oci://harbor.3key.company/czertainly-helm
 Pulled: harbor.3key.company/czertainly-helm/czertainly:2.14.0
@@ -46,7 +50,9 @@ data:
 # when undefined, manifest is also added
 
 ```
-semik@semik:~/3K/CZERTAINLY-argocd-demo/czertainly [develop|●5✚ 1…6]✔$ helm dependency update --skip-refresh; helm dependency build --skip-refresh;  helm install --debug --dry-run xx . |  grep -B 6 -A 1 'semik uz'
+semik@semik:~/3K/CZERTAINLY-argocd-demo/czertainly [develop|●5✚ 1…6]✔$ helm dependency update --skip-refresh; \
+    helm dependency build --skip-refresh; \
+    helm install --debug --dry-run xx . |  grep -B 6 -A 1 'semik uz'
 Saving 2 charts
 Downloading czertainly from repo oci://harbor.3key.company/czertainly-helm
 Pulled: harbor.3key.company/czertainly-helm/czertainly:2.14.0

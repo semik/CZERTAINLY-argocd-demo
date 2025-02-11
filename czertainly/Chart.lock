@@ -5,5 +5,5 @@ dependencies:
 - name: something
   repository: file://../something
   version: 0.1.0
-digest: sha256:63c0e4e3c7cf0677de871d071e8f757e16e4da3b17d72d619b66e4a38c725de5
-generated: "2025-02-11T12:13:03.574305734+01:00"
+digest: sha256:8db00c5f975e0db2f00b18db10943e9f0026650e553600664c9591490ced9646
+generated: "2025-02-11T12:35:30.162974767+01:00"
