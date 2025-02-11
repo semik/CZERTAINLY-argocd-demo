@@ -1,9 +1,0 @@
-apiVersion: v2
-name: czertainly
-description: A CZERTAINLY Helm chart for Kubernetes
-version: 0.1.0
-appVersion: "2.14.0"
-dependencies:
-- name: czertainly
-  version: 2.14.0
-  repository: oci://harbor.3key.company/czertainly-helm
